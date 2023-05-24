@@ -2,7 +2,7 @@ version: "3"
 
 services:
   gateway:
-    container_name: gateway 
+    container_name: Gateway 
     # que coincida con el nombre del containes que usamos
     restart: always
     # que cualquier cosa que pase se reinicie 
@@ -13,7 +13,7 @@ services:
       # en el 8000 de mi compu el 8000 del contenedor
 
   characters:
-    container_name: characters
+    container_name: Characters
     restart: always
     build: ./characters
     ports:
@@ -21,21 +21,21 @@ services:
       # no se expone en ningun puerto de mi compu. - ":8001 del contenedor. Esto es suficiente para correrlo localmente, pero luego volvemos a poner 8001:8001 para usarlo en la maquina virtual
 
   films:
-    container_name: films
+    container_name: Films
     restart: always
     build: ./films
     ports:
       - "8002:8002"
 
   planets:
-    container_name: planets
+    container_name: Planets
     restart: always
     build: ./planets
     ports:
       - "8003:8003"
 
   database:
-    container_name: database
+    container_name: Database
     restart: always
     build: ./database
     ports:
